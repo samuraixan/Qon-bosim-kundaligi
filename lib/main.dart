@@ -128,7 +128,6 @@ class _MyAppState extends State<MyApp> {
     final data = await SQLHelper.getItems();
     setState(() {
       _journals = data;
-      // _isLoading = false;
     });
   }
 
@@ -444,7 +443,7 @@ class _MyAppState extends State<MyApp> {
                       const SizedBox(width: 10,),
                       Column(
                         children: [
-                          Text('lower'.tr),
+                          Text('upper'.tr),
                           const SizedBox(height: 10,),
                           Text(_journals[index]['title']),
                         ],
@@ -452,7 +451,7 @@ class _MyAppState extends State<MyApp> {
                       const SizedBox(width: 10,),
                       Column(
                         children: [
-                          Text('upper'.tr),
+                          Text('lower'.tr),
                           const SizedBox(height: 10,),
                           Text(_journals[index]['subtitle']),
                         ],
